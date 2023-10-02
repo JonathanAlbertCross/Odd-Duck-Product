@@ -1,0 +1,50 @@
+* {
+  /* make border not add to the size of the element */
+  box-sizing: border-box;
+}
+
+main {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+header {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+
+img {
+  width: 300px;
+  height: 100%;
+}
+
+.logo {
+  width: 100px;
+  height: 100%;
+}
+
+.container {
+  width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+.container div {
+  background-color: lightgray;
+  margin: 0.5rem;
+  border: 1px solid black;
+}
+
+.images {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 1;
+}
+
+.results {
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
