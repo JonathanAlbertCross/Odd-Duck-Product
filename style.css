@@ -9,10 +9,15 @@ main {
 }
 
 header {
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 img {
