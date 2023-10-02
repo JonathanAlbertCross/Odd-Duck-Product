@@ -83,9 +83,13 @@ const allDucks = [
   new Ducks("Water Can", "./assets/water-can.jpg"),
   new Ducks("Unicorn", "./assets/unicorn.jpg"),
   new Ducks("Tauntaun", "./assets/tauntaun.jpg"),
-  new Ducks("Sweep", "./assets/sweep.jpg"),
+  new Ducks("Sweep", "./assets/sweep.png"),
   new Ducks("Shark", "./assets/shark.jpg"),
   new Ducks("Scissors", "./assets/scissors.jpg"),
+  new Ducks("Pet Sweep", "./assets/pet-sweep.jpg"),
+  new Ducks("Pen", "./assets/pen.jpg"),
+  new Ducks("Dragon", "./assets/Dragon.jpg"),
+  new Ducks("Duck dog", "./assets/dog-duck.jpg"),
 ];
 
 DucksContainer.addEventListener("click", handleDuckClick);
