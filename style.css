@@ -1,13 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Young+Serif&display=swap");
+* {
+  background-color: #ffd800;
+  margin: 30px 10px;
+}
 #img-section {
-  background-color: brown;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: space-between;
-  width: 25%;
+  justify-content: start-end;
+  width: 20%;
 }
 
 img {
   display: flex;
   width: 100%;
-  border-color: blueviolet;
+  border: 5px solid #050300;
+}
+
+.logo {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  border: 5px solid #050300;
+}
+
+.title {
+  font-family: Young Serif;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: Young Serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20%;
+}
+.blurb {
+  font-family: Young Serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
 }

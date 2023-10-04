@@ -130,6 +130,7 @@ function handleImgClick(event) {
 img1.addEventListener("click", handleImgClick);
 img2.addEventListener("click", handleImgClick);
 img3.addEventListener("click", handleImgClick);
+img4.addEventListener("click", handleImgClick);
 
 // function to create a new chart
 function renderChart() {
