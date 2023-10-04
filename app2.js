@@ -104,6 +104,7 @@ function handleImgClick(event) {
   if (userClicks === maxClicks) {
     alert("You have run out of votes");
     renderChart();
+
     // take our array after we have updated the clicks and views, and add to localStorage
     localStorage.setItem("products", JSON.stringify(products));
     return; // end the function here and don't run the rest
