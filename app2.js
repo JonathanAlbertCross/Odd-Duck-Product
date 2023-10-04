@@ -1,13 +1,15 @@
 const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");
+const img4 = document.getElementById("img4");
 
 // make sure the user only has 25 clicks
 let userClicks = 0;
-let maxClicks = 25;
+const maxClicks = 5;
 
 // a constructor that makes product objects
 function Product(name) {
+  // properties of the object
   this.name = name;
   this.src = `./images/${name}.jpg`;
   this.views = 0;
@@ -80,6 +82,7 @@ function handleImgClick(event) {
   // check if the user has run out of clicks
   if (userClicks === maxClicks) {
     alert("You have run out of votes");
+    renderChart();
     return; // end the function here and don't run the rest
   }
 
@@ -93,6 +96,7 @@ function handleImgClick(event) {
   for (let i = 0; i < products.length; i++) {
     if (clickedProduct === products[i].name) {
       products[i].clicks++;
+
       break; // break because we found what we are looking for
     }
   }
@@ -125,3 +129,42 @@ const viewResults = document.getElementById("view-results");
 viewResults.addEventListener("click", showResults);
 
 renderProducts();
+
+let dataButton = document.getElementById("chartData");
+dataButton.addEventListener("click", getData);
+getData();
+
+function renderChart() {
+  const ctx = document.getElementById("myChart");
+
+  const labelsArr = [];
+  const viewsArr = [];
+  const clicksArr = [];
+
+  // loop through my products array and add in the label, views and clicks data to my arrays
+  for (let i = 0; i < products.length; i++) {
+    labelsArr.push(products[i].name);
+    viewsArr.push(products[i].views);
+    clicksArr.push(products[i].clicks);
+  }
+
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: labelsArr,
+      datasets: [
+        {
+          label: "# of views",
+          data: viewsArr,
+          borderWidth: 1,
+        },
+        {
+          type: "line",
+          label: "# of clicks",
+          data: clicksArr,
+          borderWidth: 1,
+        },
+      ],
+    },
+  });
+}

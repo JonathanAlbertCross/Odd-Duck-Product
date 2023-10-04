@@ -1,10 +1,13 @@
 #img-section {
+  background-color: brown;
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  width: 25%;
 }
 
 img {
   display: flex;
   width: 100%;
+  border-color: blueviolet;
 }
